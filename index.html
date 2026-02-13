@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Shru, will you be my Valentine?</title>
+  <title>Vardhini, will you be my Valentine?</title>
 
   <!-- Confetti library -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
@@ -827,7 +827,7 @@
     <!-- TYPING INTRO -->
     <div class="typing-intro" id="typingIntro"></div>
 
-    <h1 id="mainTitle" style="display: none;">Shru will you be my valentine?</h1>
+    <h1 id="mainTitle" style="display: none;">Vardhini will you be my valentine?</h1>
 
     <section class="button-zone" id="zone">
       <button id="yesBtn">Yes</button>
@@ -1050,7 +1050,7 @@
     }
 
     async function startIntro() {
-      await typeText("Shru… before you answer something…", typingIntro, 80);
+      await typeText("Vardhini… before you answer something…", typingIntro, 80);
       await new Promise(resolve => setTimeout(resolve, 1000));
       typingIntro.style.display = 'none';
       mainTitle.style.display = 'block';
@@ -1110,7 +1110,7 @@
     let yesScale = 1;
     function growYes() {
       yesScale = Math.min(2.2, yesScale + 0.1);
-      yesBtn.style.transform = translateY(-50%) scale(${yesScale});
+      yesBtn.style.transform = `translateY(-50%) scale(${yesScale})`;
     }
 
     /* ---------- HM BUTTON LOGIC ---------- */
@@ -1295,7 +1295,7 @@
           const img = document.createElement('img');
           img.src = src;
           img.className = 'flow-image';
-          img.style.left = ${10 + Math.random() * 70}%; // Random horizontal position
+          img.style.left = `${10 + Math.random() * 70}%`; // Random horizontal position
           img.style.animation = 'flowDownScreen 6s linear forwards';
           img.style.animationDelay = '0s';
           imageFlow.appendChild(img);
@@ -1367,7 +1367,7 @@
           
           heartsClicked++;
           const blurAmount = 20 - (heartsClicked / totalHearts) * 20;
-          couplePhoto.style.filter = blur(${blurAmount}px);
+          couplePhoto.style.filter = `blur(${blurAmount}px)`;
 
           if (heartsClicked >= totalHearts) {
             couplePhoto.classList.add('revealed');
